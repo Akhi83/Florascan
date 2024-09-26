@@ -1,17 +1,34 @@
+<?php
+include '../Login/config.php';
+
+session_start();
+
+
+
+if (!isset($_SESSION['username'])) {
+    header("Location: ../login/login.php");
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Plant Disease Detection</title>
-        <link rel="stylesheet" href="homepage/home.css">
+        <link rel="stylesheet" href="home.css">
         <script src="https://kit.fontawesome.com/f633e8ec41.js" crossorigin="anonymous"></script>
         <link rel="icon" type="image/x-icon" href="favicon2.ico">
     </head>
     <body>
-    <?php
-    include();
-    ?>
+    <a href="../login/logout.php">
+                Logout
+            </a>
     <footer>
             
             <div class="footer-left">

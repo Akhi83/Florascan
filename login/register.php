@@ -7,7 +7,7 @@ error_reporting(0);
 session_start();
 
 if (isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: login.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
 			if ($result) {
 				echo '<script type="text/javascript">'; 
 				echo 'alert("Registration Completed.");'; 
-				echo 'window.location= "index.php";';
+				echo 'window.location= "../homepage/home1.php";';
 				echo '</script>';   
 				// echo "<script>alert('Registration Completed.')</script>";
 				
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" type="text/css" href="index2.css">
+	<link rel="stylesheet" type="text/css" href="index1.css">
 
 	<title>Register</title>
 	<link rel="icon" type="image/x-icon" href="../HomePage/favicon2.ico">
@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
 				<button name="submit" class="btn">Register</button>
 				
 			</div>
-			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
+			<p class="login-register-text">Have an account? <a href="login.php">Login Here</a>.</p>
 		</form>
 	</div>
 </body>
